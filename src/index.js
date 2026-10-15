@@ -1,0 +1,66 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./css/style.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.js";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Welcomepage from "./modules/Welcomepage";
+import Applogin from "./modules/apps/appauth/AppLogin";
+import Userlogin from "./modules/users/auth/Userlogin";
+import Landingpage from "./modules/dashboard/Landingpage";
+import Errorpage from "./modules/sharecomponents/Errorpage";
+import Usermainpage from "./modules/users/components/Usermainpage";
+import Userreport from "./modules/users/components/Userreport";
+import Appdata from "./modules/features/Appdata";
+import UserDetails from "./modules/features/UserDetails";
+import Charts from "./modules/users/components/Charts";
+import Userlist from "./modules/users/components/Userlist";
+import Addusers from "./modules/users/components/Addusers";
+import Useredit from "./modules/users/components/Useredit";
+import { Provider } from "react-redux";
+import { mygodown } from "./modules/reduxpage/Mystore";
+import Reduxpage from "./modules/reduxpage/Reduxpage";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <Provider store={mygodown}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="" element={<Applogin />}></Route>
+          <Route path="applist" element={<Welcomepage />}></Route>
+          <Route path="users" element={<Userlogin />}></Route>
+
+          <Route path="dashboard" element={<Landingpage />}>
+            <Route path="" element={<Usermainpage />}></Route>
+
+            <Route path="report" element={<Userreport />}></Route>
+
+            <Route path="users" element={<Appdata />}></Route>
+
+            <Route
+              path="users/usersdetails/:id"
+              element={<UserDetails />}
+            ></Route>
+
+            <Route path="mychart" element={<Charts />}></Route>
+
+            <Route path="userlistpage" element={<Userlist />}></Route>
+
+            <Route path="userlistpage/adduser" element={<Addusers />}></Route>
+            <Route
+              path="userlistpage/useredit/:id"
+              element={<Useredit />}
+            ></Route>
+
+            <Route path="reduxpage" element={<Reduxpage />}></Route>
+
+            <Route path="*" element={<Errorpage />}></Route>
+          </Route>
+
+          <Route path="/*" element={<Errorpage />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
+  </React.StrictMode>,
+);
