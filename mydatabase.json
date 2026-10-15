@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "username": "test1",
+      "lastname": "test2222",
+      "password": "test999999",
+      "phone": "8800199999",
+      "email": "test@mail.co.in",
+      "gender": "male",
+      "color": "#e42525",
+      "course": "MEAN",
+      "country": "United State",
+      "city": "Delhi",
+      "postal": "110088888",
+      "padd": "kkjjjjjjjjjj",
+      "job": "Designer12222",
+      "exp": "6",
+      "url1": "example@netlify",
+      "range1": "1",
+      "bio1": "goodrrrrrrrrr",
+      "file11": {},
+      "file12": {},
+      "check1": "yes",
+      "id": "sHhbmtvm12I"
+    },
+    {
+      "username": "divine",
+      "lastname": "divine",
+      "password": "divine",
+      "phone": "99945352333",
+      "email": "shifaalam49@gmail.co.in",
+      "gender": "female",
+      "color": "#c52626",
+      "course": "MERN",
+      "country": "Select Country",
+      "city": "Delhi",
+      "postal": "1100",
+      "padd": "cc",
+      "job": "Designernew",
+      "exp": "8",
+      "url1": "example@netlify.edu.co.in",
+      "range1": "9",
+      "bio1": "shifa is good",
+      "file11": {},
+      "file12": {},
+      "check1": "yes",
+      "id": "9Bphz0JNUr8"
+    }
+  ],
+  "products": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}
